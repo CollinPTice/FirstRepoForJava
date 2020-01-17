@@ -1,13 +1,11 @@
 public class MultiplicationChartClass implements MultiplicationChartInterface {
 
-
     private int numTemp;
     private int count;
 
     public MultiplicationChartClass(int num)
     {
         numTemp = num;
-
     }
 
     @Override
