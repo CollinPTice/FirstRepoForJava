@@ -15,14 +15,18 @@ public class MultiplicationChartClass implements MultiplicationChartInterface {
 
         count = 0;
 
-        System.out.print("X |  ");
+        System.out.print(" X |   ");
         for(int y = 1; y <= numTemp; y++)
         {
-            System.out.print(y + "  ");
+            if(y >= 9)
+                System.out.print(y + "  ");
+
+            else
+                System.out.print(y + "   ");
         }
         System.out.println();
 
-        System.out.print("--|");
+        System.out.print("---|");
         for(int y = 1; y <= numTemp; y++)
         {
             System.out.print("----");
@@ -31,13 +35,25 @@ public class MultiplicationChartClass implements MultiplicationChartInterface {
 
         for(int i = 1; i <= numTemp; i++)
             {
-                System.out.print(i + " |");
+                if(i < 10)
+                    System.out.print(" " + i +" |");
+
+                else
+                    System.out.print(i + " |");
 
                 for(int x = 1; x <= numTemp ; x++)
                 {
                     int result = 0;
                     result = (i)*(x);
-                    System.out.print("  " + result);
+
+                    if(result >= 100)
+                        System.out.print(" " + result);
+
+                    else if (result >= 10)
+                        System.out.print("  " + result);
+
+                    else
+                        System.out.print("   " + result);
 
                     count++;
                     if(count == numTemp)
@@ -47,7 +63,6 @@ public class MultiplicationChartClass implements MultiplicationChartInterface {
                     }
                 }
             }
-
 
     }
 }
